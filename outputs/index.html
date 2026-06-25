@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- The head contains information the browser needs before showing the page. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don't Press The Button</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- main is the main content area of this tiny game. -->
+  <main class="game">
+    <p class="eyebrow">Tiny chaos simulator</p>
+    <h1>Don't Press The Button</h1>
+
+    <!-- The counter starts at zero. JavaScript updates this number after each click. -->
+    <p class="counter">Button presses: <span id="count">0</span></p>
+
+    <!-- This is the button the player is definitely, absolutely not supposed to press. -->
+    <button id="dangerButton" class="danger-button" type="button">
+      DON'T PRESS
+    </button>
+
+    <!-- aria-live helps screen readers announce new messages when they change. -->
+    <p id="message" class="message" aria-live="polite">
+      The button is calm. Suspiciously calm.
+    </p>
+  </main>
+
+  <!-- This small panel is separate from the main game button. -->
+  <aside class="stress-panel" aria-label="Stress relief controls">
+    <!-- The emoji is animated by CSS when stress is released. -->
+    <div id="calmEmoji" class="calm-emoji" aria-hidden="true">😌</div>
+
+    <!-- JavaScript updates this stress percentage after each relaxing click. -->
+    <p class="stress-level">Stress Level: <span id="stressLevel">100%</span></p>
+
+    <!-- This secondary button is intentionally calmer and smaller. -->
+    <button id="stressButton" class="stress-button" type="button">
+      Release Stress / פרוק קיטור
+    </button>
+
+    <!-- The relaxing messages appear here. -->
+    <p id="stressMessage" class="stress-message" aria-live="polite">
+      Take one tiny breath.
+    </p>
+  </aside>
+
+  <!-- Loading JavaScript at the end lets the HTML appear first. -->
+  <script src="script.js"></script>
+</body>
+</html>
